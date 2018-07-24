@@ -40,8 +40,8 @@ links:
     url: /featured
   - title: Categories
     url: /categories
-  - title: About
-    url: /hossain-mohd-faysal
+  - title: Portfolio
+    url: /portfolio/
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/Los_Angeles
