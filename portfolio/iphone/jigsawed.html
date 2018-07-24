@@ -1,0 +1,41 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="portfolio.css" />
+<title>Owen Pedrotti's iPhone Portfolio</title>
+</head>
+
+<body>
+<iframe src="header.html" width="720" height="150"></iframe>
+<div id="contents">
+<p>
+Jigsawed 2010 Ephemeron Industries Contracted Development
+<p>
+<a href="http://itunes.apple.com/us/app/jigsawed-jigsaw-puzzle/id293124364?mt=8">iTunes Link</a>
+<p>
+An existing application which I was contracted to enhance.  My most significant contributions have been a major refactor and 
+rewrite of the puzzle view itself primarily to support zooming and panning, iPad support, and in-app purchase.  <p>
+In addition to adding the ability to zoom in and out of the puzzle view at high resolution, I also re-designed the 
+puzzle pieces so that they could be joined together and manipulated seamlessly as groups, without any shadow overlap artifacts.  
+A great deal of work went into optimizing this code due to memory limitations on older devices.
+<p>
+The addition of iPad support was fairly straightforward.  My model for its design was the Mail application, 
+using a master-detail split view to present the main menu and image picker.  In-app purchase was implemented using JSON to 
+retrieve product information from a server.  Once a purchase is made, the pack of puzzle images is retrieved as a Zip file.  
+The user experience is designed to be familiar to users of the App Store, with preview images and progress bars for downloads.
+
+<div id="pictures">
+<ul>
+<li><A href="images/jigsawed1.png"> <img src="images/jigsawed1.png"><br>Puzzle Selection</A></li>
+<li><A href="images/jigsawed2.png"> <img src="images/jigsawed2.png"><br>Puzzle View</A></li>
+</ul>
+</div>
+<div>
+<ul>
+<li><A href="images/jigsawed3.png"> <img src="images/jigsawed3crop.png"><br>In-App Purchase</A></li>
+<li><A href="images/jigsawed4.png"> <img src="images/jigsawed4.png"><br>Puzzle View</A></li>
+<li><A href="images/jigsawed5.png"> <img src="images/jigsawed5crop.png"><br>iPad Main Menu</A></li>
+</ul>
+</div>
+</div>
+</body>
+</html>

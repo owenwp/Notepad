@@ -1,0 +1,68 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="portfolio.css" />
+<title>Owen Pedrotti's Portfolio</title>
+</head>
+
+<body>
+<iframe src="header.html" width="720" height="150"></iframe>
+<div id="contents">
+<p>
+Zircon Game Engine and Wolf Hole (working title) 2006-2007 
+Team Anachron Game Development Club Project
+<p>     
+The Zircon engine is a 3D game engine engine which
+I created for my team during the summer of 2006, and which  we have
+collectively developed since. I had designed this engine to be general purpose, from the
+ground up, using C# .Net,  Managed DirectX, and test-driven development. It
+began with an interactive test framework that I made using  the NUnit testing library.
+I then created a series of tests that acted as scaffolding to  build the
+engine itself. The initial idea to build a game engine in this manner came from an
+article on the MSDN network, and I used skills learned from  my
+software engineering courses. The resulting engine has proven to be quite flexible, though it does
+not yet scale well.
+<p>
+While I created the initial framework and directed 
+development, the coding on this project has been well-distributed between a 
+number of programmers, including myself. Approximately half of the code is my own at this point.  
+Most of my work was in designing the architecture and low level
+implementation.  My  team created most of the gameplay related code, and some of the
+collision algorithms.
+<p>
+The main thing to see for the engine itself is the test framework.
+ZirconTest will open a testing GUI which will show a set of categorized unit
+tests, each of which will show some aspect of the engine's design and features.
+As I have mentioned, these tests were written in advance of the code which they
+use.  Please check the readme included in ZirconTest for more information on how
+to use this interface.
+<p>
+You must install the Microsoft .Net framework 2.0 to run this engine.
+<p>            
+Wolf Hole is the game project which has spawned from
+the Zircon engine. It has been in active development for two months, and has
+since been driving the development of the  engine itself, though the two have been kept
+separate to simplify the design of the game  itself. It is currently in a
+state that is functional but is not ready for general distribution. I include it  simply as
+an example of what can be done with the engine in a fairly
+short time-frame. You will note particularly the poor framerate and placeholder projectiles.
+<p>          
+The primary feature of this game demo
+is  the procedurally generated dungeon, made in the style of Nethack or Diablo, which can be found under
+the Saloon.  This is accomplished by linking together instances  of BSP rooms.
+<p>
+May not run on Windows 7 and/or 64bit Windows versions.
+<ul>
+<li><A href="files/directx_apr2006_redist.exe">Required DirectX Runtime</A>
+<li><A href="files/ZirconTest.rar">Download Game Engine</A>
+<li><A href="files/WolfHole.rar">Download Game Demo</A>
+<li><A href="files/zircon_source.rar">Download Source</A></li>
+</ul>
+
+<div id="video">
+Trailer<br>
+<object style="WIDTH: 640px; HEIGHT: 481px; " type="application/x-shockwave-flash" data="http://www.vimeo.com/moogaloop.swf?clip_id=385645&amp;server=www.vimeo.com&amp;fullscreen=1&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=ffffff">        <param name="quality" value="best" />        <param name="allowfullscreen" value="true" />        <param name="scale" value="showAll" />        <param name="movie" value="http://www.vimeo.com/moogaloop.swf?clip_id=385645&amp;server=www.vimeo.com&amp;fullscreen=1&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=ffffff" /></object><br >
+<A href="videos/WolfHoleTrailer.wmv">Download High Quality</A>
+</div>
+</div>
+</body>
+</html>

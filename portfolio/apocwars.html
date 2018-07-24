@@ -1,0 +1,44 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="portfolio.css" />
+<title>Owen Pedrotti's Portfolio</title>
+</head>
+
+<body>
+<iframe src="header.html" width="800" height="150"></iframe>
+<div id="contents">
+<p>
+Apoc Wars 2013 gloops International
+<p>
+<ul>
+<li><iframe width="720" height="420" src="https://www.youtube.com/embed/hb4w6oj4iL8" frameborder="0" allowfullscreen></iframe></li>
+</ul>
+<p>
+A 2.5D mobile strategy game developed in Unity with a team of around 10 people, with elements of time management and realtime base attack combat.  
+I worked mainly on the rendering and tools.  We used NGUI for the user interface and 2D sprite assets, combined with 3D cell-shaded models for 
+vehicles and turrets.   Soft shadows for 3D objects and walls are baked from geometry using an editor tool, then batched together at runtime into 
+a single skeletal mesh which Unity can update in a background thread.  
+<p>
+The terrain is drawn in tiles which tessellate like the tiles in Carcassonne.  They are placed procedurally along with billboarded props to give each 
+base unique surroundings.  To suppliment Unity's particle system, I created a bullet tracer system which creates smoothly animating streaks in a dynamic 
+vertex buffer for guns and lasers.  Our artists wanted a lot of combat effects, so I created extensive LOD and pooling systems to ensure low end 
+hardware support.
+<p>
+I created a dynamic fog of war system that enabled our spying gameplay mechanic, where you can send special units to reveal the enemy base before attacking.  
+This was done using a secondary downward facing camera that renders blob textures into an accumulation buffer, progressively blending away parts of an 
+alpha mask, which is then applied to an animated fog mesh covering the base. 
+<p>
+I also implemented several workflow systems, in particular an import/export system to save game balance data into a spreadsheet which can be edited and 
+published to our game servers and loaded at runtime.  Implemented and managed an automated build and deployment system for continuous integration.
+I also worked on social networking integration, the in app purchase system, editor tools for designing base structures and 
+building texture atlases.
+<p>
+We launched the game recently worldwide and are actively continuing to add features.
+
+
+<p>
+.
+<p>
+</div>
+</body>
+</html>

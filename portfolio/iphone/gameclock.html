@@ -1,0 +1,30 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="portfolio.css" />
+<title>Owen Pedrotti's iPhone Portfolio</title>
+</head>
+
+<body>
+<iframe src="header.html" width="720" height="150"></iframe>
+<div id="contents">
+<p>
+GameClock Tournament 2009 Zombie Process Independent Development Project
+<p>
+<a href="http://itunes.apple.com/us/app/gameclock-tournament/id318534700?mt=8">iTunes Link</a>
+<p>
+My first iPhone project.  A clock suitable for timing various two player board games, such as Chess and Go.  Includes precise implementations of the most commonly used timing methods.  Distributed as a basic free version with only sudden death mode, with in-app purchase for the rest of the timing modes.
+<p>
+The primary implementation concern for this app was battery life, as it is meant to be used for hours at a time without interruption.  It proved necessary to implement my own compositing code to draw the digits on the timer, as allowing UIKit to render the text each second was costly.  Much of the code for this app is also used in Tengen Go.
+
+<div id="pictures">
+<ul>
+<li><A href="images/gameclock1.png"> <img src="images/gameclock1.png"><br>Digital Clock Mode</A></li>
+<li><A href="images/gameclock2.png"> <img src="images/gameclock2.png"><br>Settings</A></li>
+</ul>
+</div>
+<div>
+<A href="images/gameclock3.png"> <img src="images/gameclock3.png"><br>Analog Clock Mode</A>
+</div>
+</div>
+</body>
+</html>

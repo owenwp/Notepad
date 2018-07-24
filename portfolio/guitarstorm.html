@@ -1,0 +1,55 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="portfolio.css" />
+<title>Owen Pedrotti's Portfolio</title>
+</head>
+
+<body>
+<iframe src="header.html" width="720" height="150"></iframe>
+<div id="contents">
+<p>
+Guitar Storm 2008-2009 Zombie Process Independant Game Development Project
+<p>
+This is an open source project being made by myself.  It allows players to
+play along with songs using a real guitar.  Gameplay is similar to Guitar Hero
+or Rock Band, with a visual representation of the music scrolling by, and scoring
+that rewards players who can continue a long streak without missing a note.  It
+uses the widely accepted Guitar Pro format for storing guitar tablature, and plays
+mp3s from the player's music collection in time with the game.
+<p>
+The guitar input is handled using a Fourier transform to determine the position
+of the note played on a chromatic scale, in much same way as a digital guitar tuner.
+The scrolling note chart is made to strongly resemble guitar tab texts which many
+guitarists are accustomed to reading.  Mp3 music is kept separate from the tablature
+and other data to facilitate distribution without infringing upon any copyrights.
+Players should be able to download a song, then simply locate an mp3 which may already
+be in their possession and have it synchronize correctly without any further configuration.
+Players may also practice with a metronome at any speed instead of the mp3 backing.
+<p>
+I used a variety of open source libraries and artwork, some of which I modified to 
+suit this project.  Reading the Guitar Pro tabs was particularly challenging since
+the format is not officially documented, and files still need some cleaning in order to load.
+The game is currently playable with some bugs, but there are few guitar tabs available
+that are suitable for play since their authors rarely time them with the original music
+perfectly. 
+<p>
+Its current state is somewhat playable, I hope to revisit it at some point in the future 
+and provide a release with some good example songs.
+<ul>
+<li><A href="http://guitarstorm.googlecode.com">Open Source Project</A></li>
+</ul>
+
+<div id="pictures">
+<ul>
+<li><A href="images/gs1.png"> <img src="images/gs1-small.png"><br>Play Menu</A></li>
+<li><A href="images/gs2.png"> <img src="images/gs2-small.png"><br>Game Screen</A></li>
+<li><A href="images/gs3.png"> <img src="images/gs3-small.png"><br>Game Screen</A></li>
+<li><A href="images/gs4.png"> <img src="images/gs4-small.png"><br>Song Management</A></li>
+<li><A href="images/gs5.png"> <img src="images/gs5-small.png"><br>Tab Setup</A></li>
+<li><A href="images/gs6.png"> <img src="images/gs6-small.png"><br>Guitar Tuner</A></li>
+</ul>
+Screenshots
+</div>
+</div>
+</body>
+</html>

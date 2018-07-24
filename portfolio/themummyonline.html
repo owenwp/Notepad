@@ -1,0 +1,137 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="portfolio.css" />
+<title>Owen Pedrotti's Portfolio</title>
+</head>
+
+<body>
+<iframe src="header.html" width="800" height="150"></iframe>
+<div id="contents">
+<p>
+The Mummy Online 2011-2012 Bigpoint Inc.
+<p>
+<ul>
+<li><A href="http://themummyonline.bigpoint.com/">Live Web Game</A></li>
+</ul>
+<h4>Abstract</h4>
+<p>
+A 3D browser based MMORPG developed in Unity.  Worked with a medium sized team over the course of almost a year and a half.  
+My primary responsibility was graphics programming, including all shader and level of detail implementation.  At the beginning of the project 
+I was also one of only two engineers who had experience with Unity, so I was heavily involved in the design of the initial architecture 
+and development of design tools.  I worked closely with the artists to make sure that their work was represented clearly within the game 
+and provided them with the engineering support needed for the effects that they envisioned.
+<p>
+The art direction called for film-like realism to match the movie that the game is based on.  For broad appeal, it needed to make good use of 
+current generation hardware, yet still be able to run playably on low-end integrated GPUs.  I decided to create two render paths to make this possible, 
+one using full realtime lighting and one using mostly prebaked lighting. Since this is a browser based title, art assets also needed to be reused 
+as much as possible, and streamed in only when needed.
+<p>
+Production was cancelled just as the game was about to leave beta.  
+For the time being it will be left online with minimal maintenance support.
+
+<h4>Implementation</h4>
+<p>
+Unity deferred prepass lighting was used with modifications in the high detail lighting mode, with indirect illumination stored in low resolution 
+lightmaps for static geometry and lightprobes for dynamic objects.  For the low detail mode, all static lighting was baked into a separate set of lightmaps 
+and dynamic lights are forward rendered.  This lead to some unresolved problems with color consistency in Unity 3.4 builds 
+(which the current live version is still based on), as Unity's rendering pipeline is not easily customized.  
+The Unity 3.5 builds that we were working with when production was cancelled allowed me much more control, 
+which made for much better consistency between detail levels as you can see in the comparison screenshots below.
+<p>
+<div id="pictures">
+<ul>
+    <li><A href="images/MummyTutorial1.png"> <img src="images/thumbnails/MummyTutorial1.png"><br>Maximum preset with realtime lighting</A></li>
+    <li><A href="images/MummyTutorial2.png"> <img src="images/thumbnails/MummyTutorial2.png"><br>Minimum preset with prebaked lighting</A></li>
+
+</ul>
+Screenshots
+</div>
+
+<p>
+Creating photorealism in Unity presented a lot of interesting challenges.  The current version did not 
+support HDR lighting, so I implemented a custom lighting model that performed exposure adjustment, gamma correction, and filmic tone mapping within 
+the shader program for each object before writing out to a standard 8 bit render target.  
+<p>
+Since the output color was not stored with a 
+high dynamic range there is no extra loss of precision or banding, and input light values can be set very high or low and 
+still produce correct results.  This allowed effects like gunshots to be realistically bright in dimly lit environments yet barely visible 
+in direct sunlight.  Ambient occlusion maps were used in conjunction with normal maps to produce contrast in shadow with uniform color under direct 
+illumination.
+<p>
+I created a wide range of effects and tools, including a particle curve editor, static prop rough model prototyping tools, volumetric fog, soft water, corpse dissolving, xray outline rendering for 
+players viewed behind geometry, object highlighting, sand footprints with normal mapped shading, runtime clothing re-coloring using color keys, cloud shadows, minimap exploration fog, ghost character rendering, 
+sub-surface scattering for skin, energy conserving shading, dynamic resolution, SSAO with proper attenuation under direct illumination, cinematic camera animation, 
+and animation-driven ragdoll deaths.
+<p>
+<div id="pictures">
+<ul>       
+
+    <li><A href="images/MummyDesert2.png"> <img src="images/thumbnails/MummyDesert2.png"><br></A></li>
+
+    <li><A href="images/MummyDesert4.png"> <img src="images/thumbnails/MummyDesert4.png"><br></A></li>
+    
+    <li><A href="images/MummyTutorial4.png"> <img src="images/thumbnails/MummyTutorial4.png"><br></A></li>
+    <li><A href="images/MummyTomb3.png"> <img src="images/thumbnails/MummyTomb3.png"><br></A></li>
+
+    <li><A href="images/MummyTomb5.png"> <img src="images/thumbnails/MummyTomb5.png"><br></A></li>
+
+    
+    <li><A href="images/MummyOasis1.png"> <img src="images/thumbnails/MummyOasis1.png"><br></A></li>
+    <li><A href="images/MummyOasis2.png"> <img src="images/thumbnails/MummyOasis2.png"><br></A></li>
+    <li><A href="images/MummyOasis6.png"> <img src="images/thumbnails/MummyOasis6.png"><br></A></li>
+</ul>
+Screenshots
+</div>
+<p>
+Level of detail was handled using separate adjustable sliders for lighting detail, material shader detail, mesh detail, and particle system detail.  
+Lighting detail uses Unity quality settings to adjust resolution of lightmaps and number of forward rendered lights, plus switching between deferred 
+and prebaked lighting.  Shader LOD used a fallback chain with progressively simpler materials.  Mesh and particle detail used artist defined 
+fallbacks, with emitters simplified or combined, and meshes either replaced by low poly alternates or simply disabled.  
+<p>
+A simple set of presets was also 
+provided to quickly set all of these sliders to levels appropriate for your hardware.  If the game consistently runs at a low framerate, the user is 
+prompted to try a lower preset automatically.
+<p>
+I also implemented the clothing customization system, which has six slots for interchangeable items.  Artists defined around 20 different regions of the 
+body which a piece of clothing could cover, then created different variations of each mesh that had certain regions cut out.  My toolset allowed them to 
+define which regions an item variation mesh covered using a simple set of check boxes, and would then automatically choose a minimal-cost set of meshes that 
+conservatively covered all parts of the body.  
+<p>
+This made the art production easier since it guaranteed that there would be no holes even if you 
+gave it a small number of mesh variations.  In cases where significant clipping occurs because of unnecessary overlap, QA could just send them a bug to make a new 
+variation as needed.  We were able to keep the number of variations to a bare minimum as a result, and add new items without fear of introducing major 
+visual problems.
+<p>
+
+<div id="pictures">
+<ul>       
+    <li><A href="images/MummyDesert1.png"> <img src="images/thumbnails/MummyDesert1.png"><br></A></li>
+    <li><A href="images/MummyDesert3.png"> <img src="images/thumbnails/MummyDesert3.png"><br></A></li>
+
+    <li><A href="images/MummyTutorial3.png"> <img src="images/thumbnails/MummyTutorial3.png"><br></A></li>
+    
+    <li><A href="images/MummyTomb1.png"> <img src="images/thumbnails/MummyTomb1.png"><br></A></li>
+    <li><A href="images/MummyTomb2.png"> <img src="images/thumbnails/MummyTomb2.png"><br></A></li>
+    <li><A href="images/MummyTomb4.png"> <img src="images/thumbnails/MummyTomb4.png"><br></A></li>
+    <li><A href="images/MummyTomb6.png"> <img src="images/thumbnails/MummyTomb6.png"><br></A></li>
+    
+    <li><A href="images/MummyOasis3.png"> <img src="images/thumbnails/MummyOasis3.png"><br></A></li>
+    <li><A href="images/MummyOasis4.png"> <img src="images/thumbnails/MummyOasis4.png"><br></A></li>
+    <li><A href="images/MummyOasis5.png"> <img src="images/thumbnails/MummyOasis5.png"><br></A></li>
+</ul>
+Screenshots
+</div>
+<p>
+
+Part of my work was also involved in systems to minimize initial download time.  This included a dynamic minimap generation system that would use edge 
+detection over depth and normals to create a high resolution map image of each scene (which can be expanded to full screen) at load time within the game.  Artists could tweak various parameters 
+and preview the results, then export the image so that they could create a low resolution mask to define the playable area of the map.  
+<p>
+I also implemented the streaming of character assets so that clothing meshes and textures are only downloaded when 
+a player enters the scene, and a preloading system that automatically starts to download scenes directly accessible from the current scene in the background.  
+Wherever possible I used procedural effects to cut down on texture usage.  Heavy use of depth buffers, position data, and various composition techniques 
+allowed me to implement a wide range of effects using only the basic material textures.
+<p>
+</div>
+</body>
+</html>

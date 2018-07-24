@@ -1,0 +1,30 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="portfolio.css" />
+<title>Owen Pedrotti's iPhone Portfolio</title>
+</head>
+
+<body>
+<iframe src="header.html" width="720" height="150"></iframe>
+<div id="contents">
+<p>
+Comic Book Reader 2010 Zombie Process Independant Development Project
+<p>
+<a href="http://itunes.apple.com/us/app/comic-book-reader/id378295369?ls=1&mt=8">iTunes Link</a>
+<p>
+My most recent project, also independent.  Allows users to view comic book archive files (cbr, cbz, rar, zip).  Uses the new iPad document handling features to allow it to open the files from other apps including Mobile Safari, and to add files straight from itunes.  Also includes the ability to organize comic books into collections by filtering their file names, and will generate cover thumbnails to present the user's collection visually.
+<p>
+The user interface is strongly influenced by Apple's iBooks app, with a scrolling bookshelf representing the user's library.  Core Graphics is used to composite 3D rendered images and shadows that make up the parts of the shelves.  The volumes within a collection are presented using a coverflow view, which I adapted and enhanced from an open source framework.  Threading is used for loading images to minimize load times.
+<p>
+The comic view itself uses nested scroll views, the outermost one used to handle movement from page to page, and each page has its own inner scroll view for zooming and panning.  This creates a seamless transition from one page to another by dragging past the edge of a page, even when zoomed in close.  A tap gesture is used to show and hide of the toolbars and status bar, as well as page turning by tapping in the margins.  Pages are pre-fetched from the archive and cached to eliminate any delay during page turns, and the user's reading history is retained.
+<div>
+<ul>
+<li><A href="images/comic1.png"> <img src="images/comic1.png"><br>Main Screen</A></li><br>
+<li><A href="images/comic2.png"> <img src="images/comic2.png"><br>Chapter Selection</A></li><br>
+<li><A href="images/comic3.png"> <img src="images/comic3.png"><br>Reading View With Controls Visible</A></li>
+</ul>
+Screenshots
+</div>
+</div>
+</body>
+</html>
