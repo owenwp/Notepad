@@ -70,8 +70,8 @@ kramdown:
 
 prose:
   rooturl: '_posts'
-  siteurl: 'http://owenwp.github.io/'
-  relativeLinks: 'http://owenwp.github.io/links.jsonp'
+  siteurl: 'http://zombieprocessgames.com//'
+  relativeLinks: 'http://zombieprocessgames.com/links.jsonp'
   media: 'images'
   metadata:
     _posts:
