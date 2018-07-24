@@ -12,7 +12,7 @@ share:            true
 owner:
   name:           Owen Pedrotti
   avatar:         logo3.png
-  email:          owen@zombieprocess.org
+  #email:          ???
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
   description:    Game Developer
   # Social networking links used in footer. Update and remove as you like.
