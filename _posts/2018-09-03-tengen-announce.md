@@ -18,6 +18,6 @@ Advanced rendering techniques including ray tracing and dynamic global illuminat
 
 Using Oculus Avatars with VOIP, you can sit across from your friends and chat over a nice game, or even teach your friends how to play in an intuitive way. Challenge yourself by playing with people all over the world through the [Online Go Server](https://online-go.com/), or try out the latest freely available Go AI programs such as Leela. 
 
-![Stones]({{ site.url }}/images/TengenVR4.PNG)
+![Room]({{ site.url }}/images/TengenVR4.PNG)
 
 Release is planned for late 2018, for free, on the Oculus Store. Stay tuned for more details as development approaches completion.
