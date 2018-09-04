@@ -4,7 +4,7 @@ title: "Tengen Go"
 description: "A new VR experience for players of the ancient game of Go."
 category: games
 tags: [announcements, tengen]
-imagefeature: TengenVR1.jpg
+imagefeature: TengenVR1.PNG
 share: true
 ---
 
