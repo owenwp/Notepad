@@ -10,7 +10,7 @@ share: true
 
 Presenting Tengen Go, a social VR game that lets you play face to face with your friends, or with a wide community of existing players through any web-enabled device, in a relaxing Japanese-styled environment. 
 
-![Environment]({{ site.url }}/images/TengenVR2.PNG)
+[![Environment]({{ site.url }}/images/TengenVR2.PNG)]({{ site.url }}/images/TengenVR2.PNG)
 
 Advanced rendering techniques including ray tracing and dynamic global illumination are used to present the natural look and feel of a a traditional Go set, and a welcoming environment to play in. 
 
