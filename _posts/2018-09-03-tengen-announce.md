@@ -6,6 +6,7 @@ category: games
 tags: [announcements, tengen]
 imagefeature: TengenVR1.PNG
 share: true
+featured: true
 ---
 
 Presenting Tengen Go, a social VR game that lets you play face to face with your friends, or with a wide community of existing players through any web-enabled device, in a relaxing Japanese-styled environment. 
