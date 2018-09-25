@@ -20,10 +20,27 @@
 <p>
 Marvel Powers United VR 2016-2018 Sanzaru Games
 <p>
-A cooperative online VR game where players embody classic Marvel super heroes and fight against waves of enemies and villains.
+A cooperative online VR game where players embody classic Marvel heroes and fight against waves of enemies and supervillains.
 <p>
-Implemented player inverse kinematics system. Developed resolution independent 3D UI with refinements to work with dynamic temporal supersampling. Created character material pipeline and shaders for
-previewing different lighting models in Substance Painter. Advised on rendering, inverse kinematics, GPU optimization, scalability, lighting, effects, lending assistance where needed toward the end of production.
+Implemented player inverse kinematics system and body size compensation. The system computes a full body pose based on the positions and orientations of the head and hands. Added features to blend IK smoothly with partial- and full-body animations, allowing for special moves with dramatic animations,
+     and added secondary motion for remote players. 
+    Working with technical artists, I set up the character models to flex and rotate their joints in a natural looking manner using programmatic constraints, and set up finger animations based on touch sensors and reaching for the disc.
+    I implemented network serialization and interpolation to allow for low update rates to the server.
+    <p>
+Developed resolution independent 3D UI with refinements to work with dynamic temporal supersampling. Modified separate translucency renderer to allow UMG widgets and other 3D tranclucent UI effects to render at 
+        full native resolution while the base rendering pass changes dynamically to maintain framerate, and fixed several parts of the rendering pipeline to work with temporal upscaling for higher image quality at lower resolutions. 
+        <p>   
+            I integrated and maintained third party tools including Simplygon and FMOD, fixing workflow issues within the engine and adding additional artist/designer utility functions. 
+            I established presets and standard practices for applying LOD to environments and characters, and created several prototype tools for combining geometry and materials to make 
+            the most efficient use of our assets and environments. 
+            <p>
+         Created character material pipeline and shaders for previewing different lighting models in Substance Painter. Made modifications to the engine to automate texture importing based on a naming convention. 
+            I created a template for player character rendering, including draw call merging in third person and foot ambient occlusion. Created a system for automating dynamic material swapping for enemy meshes, 
+            allowing expensive shader effects to be efficiently enabled and disabled without excessive blueprint setup. 
+            <p>
+            During a large portion of production, I was mainly focused on a different unannounced project, but came in toward the end to work on optimization, lighting, and to implement scalability settings. 
+            I assisted artists with physically based lighting rigs using realtime lighting with baked environment shadows, fixing inconsistencies with light sources and improving accuracy of light probes. I helped with the profiling and optimization of VFX and materials, minimizing shader complexity and overdraw. 
+             
 <p>
 <ul>
 <li><iframe width="720" height="410" src="https://www.youtube.com/embed/mpSuocAd7jU" frameborder="0" allowfullscreen></iframe></li>

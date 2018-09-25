@@ -23,10 +23,28 @@ Ripcoil 2016 Sanzaru Games
 A competitive online VR game where players attempt to throw discs past each other in futuristic arenas. 
 Designed for standing play, you lean to the left and right to drive a hovering platform across the front of your goal.
 <p>
-Implemented player inverse kinematics system and body size compensation. Created systems for standing mode tracking and calibration, 
-and worked on refinements for the leaning-based movement system. I lead the effort for optimization and scalability, implementing 
-options and fallbacks for low end hardware. I was also responsible for fixing general image quality and graphical issues, and refining 
-shader effects and animation blueprints.
+Implemented player inverse kinematics system and body size compensation. The system computes a full body pose based on the positions and orientations of the head and hands. 
+    Working with technical artists, I set up the character models to flex and rotate their joints in a natural looking manner using programmatic constraints, and set up finger animations based on touch sensors and reaching for the disc.
+    I implemented network serialization and interpolation to allow for low update rates to the server.
+    <p>
+    To maximize comfort, the floating platform that the player stands on is at the same height as the real floor, and the gameplay calls for the player to keep their feet planted in place while leaning side to side. 
+    I created a calibration system that measures the player's height and armspan, then applies an artist-defined 2D skeletal blend to match the avatar model's dimensions to those of the player, allowing the inverse kinematics to more accurately match the players real motions. Players that do not calibrate or are too short or tall for the player model to match them reasonably instead see floating hands in first person, rather than twisted or stretched arms.
+    To ensure that players of different heights can play effectively, I made a system to drive the motion of the platforms by approximating the angle of the player's leaning, and offsets the vertical positions of the platforms to ensure that different players do not have to reach up or down to catch the disk. Refined the leaning based control system to allow for designers to specify custom velocity curves, so they could experiment and adjust the feel of gameplay. 
+    <p>
+I spent a large portion of my time on performance optimization, refining the physically based shading art pipeline, and scalability. I optimized shaders to meet our visual targets with a minimal cost, turning artist-made prototype VFX into final assets. I worked with artists to ensure consistent use of physically based rendering principles in texture assets, and made engine modifications to automate asset importing from substance painter. 
+        I also worked to ensure transparency effects worked properly with temporal antialiasing, which was essential to deal with the detailed specular reflections that occur in our metallic, stylized futuristic environments and characters, and tuned the TAA algorithm to maximize sharpness. 
+        <p>
+        I optimized the lighting in our scenes to avoid real time computation wherever possible, while still preserving the small scale details that the level artists wanted. Set up a player detail lighting system to ensure consistent visibility while providing detailed shadows on higher scalability presets. 
+        Assisted with the development and optimization of a crowd rendering system, which draws 3D animated characters into a sprite atlas at variable time slices. The atlas also functions as a ring buffer of recently rendered frames so that individual crowd characters can be animated out of phase to avoid obvious repitition. 
+        I implemented basic scalability settings to make use of high end hardware for better antialiasing, post processing, shadows, and detail mesh quantity. 
+        <p>
+            I also set up a performance benchmark to execute on first run and select the appropriate preset automatically. This mainly involved testing on as many hardware configurations as possible and collecting performance data, then adjusting presets and benchmark thresholds to reach our targets. 
+            I worked with level artists to establish budgets, ensuring that all of our levels had a similar performance footprint, and that worst case VFX scenarios did not exceed the remaining headroom. Implemented various systems to prevent rendering of effects when they are not visible.
+            I assisted with network performance profiling and optimization, finding bottlenecks and unnecessary traffic. 
+            <p>
+                I implemented the first run and calibration UX flows. Created a blueprint based loading screen system allowing artists to visually set up an Oculus Layer based scene with multiple quads. Built a floating camera drone spectator pawn that replicates head motions. Created some minor environmental shader effects, including simulated window interiors and hologram scanlines.
+
+
 <p>
 <ul>
 <li><iframe width="720" height="410" src="https://www.youtube.com/embed/rqZvhymqeqs" frameborder="0" allowfullscreen></iframe></li>
