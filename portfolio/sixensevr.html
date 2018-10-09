@@ -25,14 +25,49 @@ Provides a full-body avatar, realistic hand interaction, network synchronization
 into Unity and Unreal.  Works with any modern HMD system including GearVR and Cardboard.
 <p>
 Worked as project lead, designed and implemented the high level tracking and interaction systems with code-free developer tools.  
-These tools were used by our design and art team to build our showcase demos.
+These tools were used by our design and art team to build our showcase demos. 
 <p>
-<ul>
-<li><iframe width="720" height="410" src="https://www.youtube.com/embed/HlER5a3jNQI" frameborder="0" allowfullscreen></iframe></li>
-<li><iframe width="720" height="410" src="https://www.youtube.com/embed/Q-HPd4Q0xVs" frameborder="0" allowfullscreen></iframe></li>
-<li><iframe width="720" height="410" src="https://www.youtube.com/embed/HUOj56uVjJ8" frameborder="0" allowfullscreen></iframe></li>
-<li><iframe width="720" height="410" src="https://www.youtube.com/embed/OhRcGTW0w_c" frameborder="0" allowfullscreen></iframe></li>
-</ul>
+Designed and implemented VR tracking API for Razer Hydra and STEM System magnetically tracked controllers. 
+Developed sensor fusion between a magnetic tracking module and existing HMD sensors for registration between the two tracking spaces, 
+allowing our controllers to work accurately in VR without manual calibration, while also adding untethered position tracking to 3-dof VR syetems 
+including Gear VR. 
+<p>
+Documented and expanded our primary hardware driver and API, and researched new tracking methods and enhancements. 
+Invented a form of sensor fusion that partially corrects common magnetic field distortions using additional 
+inertial measurements, greatly improving the accuracy of our hardware at longer distances and making it viable for 360 degree VR 
+experiences.
+<p>
+Created an inverse kinematics-based skeletal tracking API, allowing different game engines to use a common avatar pose generator, using as many 
+tracking points as are available from our system, including leg tracking. Integrated into Valve Source Engine, Unity 3D Engine, and Unreal Engine 4 
+as a modular C API plugin with additional engine-specific tools. 
+<p>
+Created a full VR port of Valve's Portal 2, utilizing the above tracking and inverse kinematics systems. In both single and multiplayer, 
+the character models were visible in first person, following the player's motions and interacting properly with the portals in the games. 
+Implemented systems allowing players to reach their heads and hands through portals seamlessly. Fixed various rendering issues to make 
+portal rendering work correctly in stereoscopic VR. Created new physics interactions, allowing 
+players to naturally pick up and move cubes using the portal gun. 
+<p>
+Created visual tools for Unity and Unreal integration. By interactively lining up a 3D model of the tracking hardware with the avatar character 
+grabbable prop/weapon models, develoepers can quickly set up accurate tracking of both virtual and real world objects to line up naturally with 
+tracking hardware. This included haptic gun and table tennis paddle accessories with 3D printed attachment brackets. Created setup wizards for 
+complex skeletal avatars, allowing quick application of realistic inverse kinematics to player avatars by non-technical designers and artists. 
+<p>
+Worked with artists and gameplay designer to create several gameplay demos and prototypes in both Unity and Unreal. Implemented custom collision 
+system for hand held objects for accurate continuous intersection from objects like swords and tennis rackets, used in our Slash mini-game for 
+precisely deflecting projectiles with an energy sword. Implemented various other small gameplay and physics systems at need for various demos. 
+Optimized demos for both PC and Gear VR. 
+<p>
+Implemented network serialization and interpolation of tracking data used for inverse kinematics, allowing for simple multiplayer synchronization. 
+This was used in our SiegeVR archery demos, allowing players to cooperate and compete at various archery contests and base defense game modes. 
+Expanded our tracking and IK apis to work with Valve's OpenVR backend, allowing seamless compatibility with HTC Vive and Oculus Touch.
+
+    <ul>
+        <li><iframe width="720" height="410" src="https://www.youtube.com/embed/aftF8BN7-DQ" frameborder="0" allowfullscreen></iframe></li>
+        <li><iframe width="720" height="410" src="https://www.youtube.com/embed/6DQu3QuRULU" frameborder="0" allowfullscreen></iframe></li>
+        <li><iframe width="720" height="410" src="https://www.youtube.com/embed/HUOj56uVjJ8" frameborder="0" allowfullscreen></iframe></li>
+        <li><iframe width="720" height="410" src="https://www.youtube.com/embed/OhRcGTW0w_c" frameborder="0" allowfullscreen></iframe></li>
+        <li><iframe width="720" height="410" src="https://www.youtube.com/embed/Q-HPd4Q0xVs" frameborder="0" allowfullscreen></iframe></li>
+    </ul>
 <p>
 .
 <p>
