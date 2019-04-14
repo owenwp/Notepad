@@ -36,6 +36,8 @@ links:
     url: /
     external: false
     icon: home
+  - title: Tengen Go
+    url: /tengen/
   - title: Featured Posts
     url: /featured
   - title: Categories
