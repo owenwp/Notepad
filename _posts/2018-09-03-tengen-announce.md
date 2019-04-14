@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Tengen Go"
+title: "Tengen Go Preview"
 description: "A new VR experience for players of the ancient game of Go."
 category: games
 tags: [announcements, tengen]
