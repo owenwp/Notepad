@@ -7,7 +7,7 @@ imagefeature: TengenVR1.PNG
 chart: true
 ---
 <figure>
-  <img src="{{ site.url }}/images/tengen/hero.PNG" alt="Tengen Go">
+  <img src="{{ site.url }}/images/hero.PNG" alt="Tengen Go">
   <figcaption>Tengen Go</figcaption>
 </figure>
 
