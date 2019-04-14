@@ -31,3 +31,5 @@ For account related issues see the [OGS website](https://online-go.com). If you 
 
 Privacy:
 Tengen Go does not store player information or passwords. OGS user ID is stored within Oculus Platform services for account linking purposes.
+
+Tengen Go © 2019 Zombie Process
