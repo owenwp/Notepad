@@ -21,4 +21,4 @@ Expect new environment and decoration options post-launch.
 
 [![]({{ site.url }}/images/screen4.png)]({{ site.url }}/images/screen4.png)
 
-If you would like to help test Tengen Go before launch, please go to the [Tengen Go]({{ site.url }}/tengen/index.html) page and let me know using the Contact form.
+If you would like to help test Tengen Go before launch, please go to the [Tengen Go]({{ site.url }}/tengen/index.html) page and let me know using the Contact form, with the email address you use for your Oculus account.
