@@ -1,0 +1,24 @@
+---
+layout: post
+title: "Tengen Go Update"
+description: "A new VR experience for players of the ancient game of Go."
+category: games
+tags: [tengen]
+imagefeature: hero.png
+share: true
+featured: true
+---
+
+I am proud to announce that Tengen Go is in a beta state, and is currently in review for release on the Oculus Store.
+
+[![]({{ site.url }}/images/TengenVR2.PNG)]({{ site.url }}/images/TengenVR2.PNG)
+
+Using the new Expressive Avatar system, you can talk with other players in a natural and immersive way, with lip syncing and eye animations.
+
+[![]({{ site.url }}/images/TengenVR3.PNG)]({{ site.url }}/images/TengenVR3.PNG)
+
+Expect new environment and decoration options post-launch.
+
+[![]({{ site.url }}/images/TengenVR4.PNG)]({{ site.url }}/images/TengenVR4.PNG)
+
+If you would like to help test Tengen Go before launch, please go to the [Tengen Go]({% link tengen/index.html %}) page and let me know using the Contact form.
