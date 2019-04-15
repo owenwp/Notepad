@@ -14,7 +14,7 @@ chart: true
 Play the game of Go (Baduk, Weiqi) in a relaxing environment with a large online community though the Online-go.com server, or offline against a range of AI opponents. 
 Players in VR can interact and talk naturally using Oculus Expressive Avatars. Chat with players on any web-enabled device using speech-to-text and text-to-speech.
 
- * Natural game interaction with hand presence
+ * Natural game interaction with hand presence and voice communication
  * Calming Japanese countryside environment
  * Dynamic time of day to maintain your body clock during long play sessions
  * Play with friends, or create open challenges with your preferred game settings
